@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'surf' ;
+    src: url(../Oldex.otf) format('opentype'), url(../Oldex.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'camp' ;
+    src: url(../animeace2_reg.otf) format('opentype'), url(../animeace2_reg.ttf) format('truetype');
+}
+
+
+
+
+body {
+    font-family: "Roboto", serif;
+}
+
+
+.interface {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffcfc10;
+    backdrop-filter: blur(2px);
+    
+}
+
+header .container-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+header .container-cabecalho .logo img {
+    max-width: 120px;
+}
+
+header .container-cabecalho nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+
+}
+
+header .container-cabecalho nav a {
+    text-decoration: none;
+    color: rgb(248, 242, 242);
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 2px rgb(36, 35, 35);
+    transition: .5s;
+}
+
+header .container-cabecalho nav a:hover {
+    color: rgb(26, 25, 25);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+header .container-cabecalho .botao-desktop,
+.hero .txt-hero button {
+    padding: 5px 30px;
+    font-family: "Roboto", serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: transparent;
+    border: 2px solid rgb(230, 238, 238);
+    color: rgb(230, 238, 238);
+    text-shadow: 2px 2px 2px rgb(36, 35, 35);
+}
+
+header .container-cabecalho .botao-desktop:hover,
+.hero .txt-hero button:hover {
+    background-color: rgba(39, 39, 39, 0.466);
+}
+
+
+/* estilo botao do menu mobile  */
+
+header .botao {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ffffff;
+    background: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    display: none;
+ 
+}
+
+.linha {
+    width: 30px;
+    height: 2px;
+    display: block;
+    margin: 6px auto;
+    background-color: #ffffff;
+    position: relative;
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+.botao.ativar .linha:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.botao.ativar .linha:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+.botao.ativar .linha:nth-child(2) {
+    width: 0;
+}
+
+.botao.ativar {
+    box-shadow: 1px 1px 10px #000000;
+}
+
+.botao.ativar .linha {
+    box-shadow: 1px 1px 10px #000000;
+}
+
+
+/* menu mobile */
+
+header .menu-mobile {
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 0vh;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+header .menu-mobile nav {
+    width: 100%;
+
+}
+
+header .menu-mobile nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+header .menu-mobile nav a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px 0;
+    display: block;
+    width: 100vw;
+    text-align: center;
+}
+
+header .menu-mobile nav a:hover {
+    background-color: #0000004b;
+    color: rgba(255, 255, 255, 0.986);
+
+}
+
+header .menu-mobile.abrir {
+    width: 100%;
+    height: 100vh;
+
+}
+
+body.no-overflow {
+    overflow: hidden;
+}
+
+/* HERO */
+
+section.hero {
+    height: 100vh;
+    background-image: url(../hero/hero.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 60px;
+}
+
+.efeito-txt-hero {
+    visibility: hidden;
+}
+
+.hero .txt-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 30px;
+    margin-top: 140px;
+    border-radius: 30px;
+    border: 2px solid #ffffff30;
+    background-color: #fffcfc10;
+    backdrop-filter: blur(5px);
+    max-width: 700px;
+
+}
+
+.hero .txt-hero h1 {
+    font-family: 'surf', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3.4rem;
+    color: rgb(221, 221, 214);
+    text-shadow: 5px 5px 3px black;
+}
+
+.hero .txt-hero h3 {
+    font-size: 3rem;
+    color: rgb(221, 221, 214);
+    text-shadow: 2px 2px 3px black;
+
+}
+
+.hero .txt-hero p {
+    font-size: 1.3rem;
+    color: rgb(221, 221, 214);
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+ 
+}
+
+.hero .txt-hero input {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 30px;
+    min-width: 400px;
+}
+
+.rodape {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
