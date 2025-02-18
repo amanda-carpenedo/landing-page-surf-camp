@@ -13,6 +13,8 @@
 
 body {
     font-family: "Roboto", serif;
+    position: relative;
+    z-index: 0;
 }
 
 
@@ -29,6 +31,7 @@ header {
     left: 0;
     background-color: #fffcfc10;
     backdrop-filter: blur(2px);
+    z-index: 870;
     
 }
 
@@ -131,13 +134,14 @@ header .botao {
 /* menu mobile */
 
 header .menu-mobile {
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: rgba(20, 20, 20, 0.884);
     backdrop-filter: blur(10px);
     position: absolute;
     width: 100%;
     height: 0vh;
     top: 0;
     left: 0;
+    z-index: 890;
     visibility: hidden;
     overflow: hidden;
     transition: .5s;
@@ -170,7 +174,7 @@ header .menu-mobile nav a {
 }
 
 header .menu-mobile nav a:hover {
-    background-color: #0000004b;
+    background-color: #f1e8e84b;
     color: rgba(255, 255, 255, 0.986);
 
 }
@@ -185,7 +189,7 @@ body.no-overflow {
     overflow: hidden;
 }
 
-/* HERO */
+/* * HERO */ 
 
 section.hero {
     height: 100vh;
